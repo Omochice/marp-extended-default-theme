@@ -1,0 +1,68 @@
+/*! 
+ * @theme extended-default
+ * @author Omochice
+ *
+ * @auto-scaling true
+ * @size 4:3  1440px 1080px
+ * @size 16:9 1920px 1080px
+ */
+
+@import-theme "default";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&family=Noto+Sans+JP&display=swap");
+
+// colorscheme night-owl
+$background: #011627;
+$foreground: #d6deeb;
+$currentline: #01111d;
+$cursorselection: #1d3b53;
+$currentline: #80a4c2;
+$linenumber: #4b6479;
+$currentlinenumber: #c5e4fd;
+$tagskeywords: #7fdbca;
+$comment: #637777;
+$red: #ef5350;
+$green: #22da6e;
+$yellow: #addb67;
+$blue: #82aaff;
+$orange: #f78c6c;
+$magenta: #c792ea;
+$cyan: #21c7a8;
+$white: #ffffff;
+$brightblack: #575656;
+
+section::after {
+  content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+}
+
+section {
+  &.title,
+  &.lead {
+    border: solid 7px $cyan;
+    border-right: solid 7px $red;
+  }
+  border: solid 7px $cyan;
+  border-bottom: solid 7px $red;
+  font-family: "Noto Sans JP";
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". ."
+    "column column2";
+}
+
+.column {
+  grid-area: column;
+}
+
+.column2 {
+  grid-area: column2;
+}
+
+code {
+  font-family: "Fira Mono", monospace;
+}
