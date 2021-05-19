@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@marp-team/marp-cli": "^1.1.1",
+    "sass": "^1.32.13"
+  }
+}
