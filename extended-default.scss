@@ -43,6 +43,9 @@ section {
   border: solid 7px $cyan;
   border-bottom: solid 7px $red;
   font-family: "Noto Sans JP";
+  &[data-marpit-advanced-background="content"] {
+    border-right: none;
+  }
 }
 
 .grid {
