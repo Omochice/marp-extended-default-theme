@@ -1,4 +1,4 @@
-/*! 
+/*!
  * @theme extended-default
  * @author Omochice
  *
@@ -10,8 +10,8 @@
 
 @import-theme "default";
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono&family=Noto+Sans+JP&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css");
 
-// colorscheme night-owl
 $background: #011627;
 $foreground: #d6deeb;
 $currentline: #01111d;
@@ -72,6 +72,12 @@ code {
   font-family: "Fira Mono", monospace;
 }
 
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .borderd img {
-  border: solid; 
+  border: solid;
 }
