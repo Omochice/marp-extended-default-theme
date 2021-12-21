@@ -31,8 +31,7 @@ jobs:
             mv /tmp/extended-default/css/extended-default.css ./
             git config user.name = "github-actions"
             git config user.email = "github-actions[bot]@users.noreply.github.com"
-            ls
-            git add ./extended-default.css
+            git add ./extended-default.css --force
             git commit -m ":robot: Add compilet file"
       - name: Push changes
         uses: ad-m/github-push-action@master
