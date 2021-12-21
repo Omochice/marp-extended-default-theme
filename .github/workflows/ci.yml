@@ -1,0 +1,37 @@
+name: compile scss
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "extended-default.scss"
+      - ".github/workflows/ci.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v2
+      - name: Compile SCSS to CSS
+        uses: gha-utilities/sass-build@v0.4.8
+        with:
+          source: extended-default.scss
+          destination: extended-default.css
+      - name: Git Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: releases
+      - name: Add compiled file
+        run: |
+            git config user.name = "github-actions"
+            git config user.email = "github-actions[bot]@users.noreply.github.com"
+            git add extended-default.css
+            git commit -m ":robot: Add compilet file"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: releases
