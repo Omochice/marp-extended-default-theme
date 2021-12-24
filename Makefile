@@ -6,7 +6,7 @@ all: clean format extended-default.css pdf
 format:
 	prettier extended-default.scss --write
 
-extended-default.css:
+extended-default.css: extended-default.scss
 	npx sass extended-default.scss > extended-default.css
 
 .PHONY: pdf
