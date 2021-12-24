@@ -15,6 +15,8 @@ Omochice
 
 ## Sect 1
 
+`this is code`
+
 - --
 
 ### h1-h6
@@ -92,3 +94,38 @@ you can write 2 columns !
 
 </div>
 
+---
+
+## grid by skeleton
+
+<div class="row">
+<div class="three columns">
+
+- 1
+    - test text
+- 2
+    - text text tetxt
+
+</div>
+<div class="nine columns">
+
+```python
+def fizzbuzz(i: int) -> str:
+    if i % 15 == 0:
+        return "FIZZBUZZ"
+    elif i % 5 == 0:
+        return "BUZZ"
+    elif i % 3 == 0:
+        return "FIZZ"
+    else:
+        return str(i)
+
+fizzbuzz(30) # -> "FIZZBUZZ"
+```
+
+</div>
+</div>
+
+---
+
+<img src="https://avatars.githubusercontent.com/u/44566328?s=400&u=c02fd74708038c6e900deeb58aabb3f79b757965&v=4" class="bordered center" height="200px" width="200px">
