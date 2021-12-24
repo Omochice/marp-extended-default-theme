@@ -58,18 +58,20 @@ section {
     ". ."
     "column column2";
   align-items: center;
+
+  .column {
+    grid-area: column;
+  }
+
+  .column2 {
+    grid-area: column2;
+  }
 }
 
-.column {
-  grid-area: column;
-}
-
-.column2 {
-  grid-area: column2;
-}
-
+pre,
 code {
   font-family: "Fira Mono", monospace;
+  background-color: #215aa012;
 }
 
 .row {
@@ -78,6 +80,11 @@ code {
   justify-content: center;
 }
 
-.borderd img {
+img.bordered {
   border: solid;
+}
+
+ul,
+ol {
+  padding-left: 0.5rem;
 }

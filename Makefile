@@ -1,6 +1,6 @@
 
 .PHONY: all
-all: clean format extended-default.css pdf
+all: deps clean format extended-default.css pdf
 
 .PHONY: format
 format:
@@ -16,4 +16,8 @@ pdf:
 .PHONY: clean
 clean:
 	rm extended-default.css examples/example.pdf --force
+
+.PHONY: deps
+deps:
+	npm install
 
